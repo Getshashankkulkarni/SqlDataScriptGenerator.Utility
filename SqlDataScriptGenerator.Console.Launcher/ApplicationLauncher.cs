@@ -12,14 +12,13 @@ namespace SqlDataScriptGenerator.Console.Launcher
     {
         public static void Main(string[] args)
         {
-            string connectionString = "Server=Shashank;Database=PalashWebDB_SGHM_Client;Trusted_Connection=True;";
+            string connectionString = "Server=Shashank;Database=Test_DB;Trusted_Connection=True;";
             var sqlConnection = new SqlConnection(connectionString);
             SqlServerDataScriptRequest scriptRequest = new SqlServerDataScriptRequest
             {
-                TableName = "T_Charges",
-                RequestType = "U",
-                WhereClause = "Opd_Ipd_Id=1681",
-                ColumnsToIgnore = new List<string> { "UpdatedBy","UpdatedWindowsLoginName" }
+                TableName = "CustInfo",
+                RequestType = "I",
+                WhereClause = "id=1"
             };
 
             IScriptGenerator scriptGenerator = new SqlServerScriptGenerator();
