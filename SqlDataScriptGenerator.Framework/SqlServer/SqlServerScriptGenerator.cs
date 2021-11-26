@@ -156,15 +156,15 @@ namespace SqlDataScriptGenerator.Framework.SqlServer
         private void BuildScript(SqlServerDataScriptRequest scriptRequest)
         {
             // Build Script
-            if (scriptRequest.RequestType.ToUpper() == "I")
+            if (scriptRequest.RequestType == RequestType.INSERT)
             {
                 this.BuildInsertScript(this.ScriptBuilder, scriptRequest.TableName, this.DataTable, this.PkColumnList, this.ColumnList);
             }
-            else if (scriptRequest.RequestType.ToUpper() == "U")
+            else if (scriptRequest.RequestType == RequestType.UPDATE)
             {
                 this.BuildUpdateScript(this.ScriptBuilder, scriptRequest.TableName, this.DataTable, this.PkColumnList, this.ColumnList);
             }
-            else if (scriptRequest.RequestType.ToUpper() == "D")
+            else if (scriptRequest.RequestType == RequestType.DELETE)
             {
                 this.BuildDeleteScript(this.ScriptBuilder, scriptRequest.TableName, this.DataTable, this.PkColumnList, this.ColumnList);
             }

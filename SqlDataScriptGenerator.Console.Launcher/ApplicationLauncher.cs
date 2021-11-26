@@ -1,5 +1,6 @@
 ﻿using Microsoft.Data.SqlClient;
 using SqlDataScriptGenerator.Framework.Contracts;
+using SqlDataScriptGenerator.Framework.Models;
 using SqlDataScriptGenerator.Framework.Models.SqlServer;
 using SqlDataScriptGenerator.Framework.SqlServer;
 using System;
@@ -17,7 +18,7 @@ namespace SqlDataScriptGenerator.Console.Launcher
             SqlServerDataScriptRequest scriptRequest = new SqlServerDataScriptRequest
             {
                 TableName = "CustInfo",
-                RequestType = "I",
+                RequestType = RequestType.INSERT,
                 WhereClause = "id=1"
             };
 

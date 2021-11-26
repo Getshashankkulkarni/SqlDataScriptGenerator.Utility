@@ -26,7 +26,7 @@ namespace SqlDataScriptGenerator.Framework.Models
         /// <summary>
         /// Gets or sets a flag indicating the type of script. I = Insert, U = Update, D = Delete.
         /// </summary>
-        public string RequestType { get; set; } = "I";
+        public RequestType RequestType { get; set; } = RequestType.INSERT;
 
         /// <summary>
         /// Gets or sets the table name.
