@@ -17,7 +17,7 @@ To demonstrate how to make use of this utility, I have also added a console appl
             SqlServerDataScriptRequest scriptRequest = new SqlServerDataScriptRequest
             {
                 TableName = "CustInfo",
-                RequestType = "I",
+                RequestType = RequestType.INSERT,
                 WhereClause = "id=1"
             };
 
@@ -28,7 +28,7 @@ To demonstrate how to make use of this utility, I have also added a console appl
   
           IF NOT EXISTS(SELECT 1 FROM [dbo].[CustInfo] WHERE [id] = 1) INSERT INTO [dbo].[CustInfo]([id],[first_name],[last_name]) VALUES(1,'Shashank','Kulkarni')
             
-The possible values for **RequestType** property in  **SqlServerDataScriptRequest** are 
-1. U - Update 
-2. I - Insert
-3. D - Delete
+The possible values for **RequestType** property in  **SqlServerDataScriptRequest** are **RequestType** enum - 
+INSERT
+UPDATE
+DELETE
