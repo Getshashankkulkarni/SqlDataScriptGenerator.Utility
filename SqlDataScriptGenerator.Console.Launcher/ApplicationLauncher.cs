@@ -13,13 +13,13 @@ namespace SqlDataScriptGenerator.Console.Launcher
     {
         public static void Main(string[] args)
         {
-            string connectionString = "Server=Shashank;Database=Test_DB;Trusted_Connection=True;";
+            string connectionString = @"Server=localhost\sqlexpress;Database=APP_FRAMEWORK;Trusted_Connection=True;";
             var sqlConnection = new SqlConnection(connectionString);
             SqlServerDataScriptRequest scriptRequest = new SqlServerDataScriptRequest
             {
-                TableName = "CustInfo",
+                TableName = "DATA_DICTIONARY_ENTITY",
                 RequestType = RequestType.INSERT,
-                WhereClause = "id=1"
+                //WhereClause = "id=1"
             };
 
             IScriptGenerator scriptGenerator = new SqlServerScriptGenerator();

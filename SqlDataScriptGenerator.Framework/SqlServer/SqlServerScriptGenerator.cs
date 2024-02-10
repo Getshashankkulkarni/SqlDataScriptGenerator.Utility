@@ -242,10 +242,10 @@ namespace SqlDataScriptGenerator.Framework.SqlServer
                 else
                 {
                     foreach (var column in pkColumnList)
-                    {
-                        scriptBuilder.Append($"IF NOT EXISTS(SELECT 1 FROM [dbo].[{tableName}] WHERE ");
+                    {  
                         if (isFirstColumn)
                         {
+                            scriptBuilder.Append($"IF NOT EXISTS(SELECT 1 FROM [dbo].[{tableName}] WHERE ");
                             isFirstColumn = false;
                             scriptBuilder.Append($"{column} = {this.GetColumnValue(column, row)}");
                         }

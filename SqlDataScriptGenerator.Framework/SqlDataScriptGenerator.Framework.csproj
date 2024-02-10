@@ -1,7 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
+    <SignAssembly>False</SignAssembly>
+    <AssemblyOriginatorKeyFile>C:\Users\hp\Desktop\KeyFile.txt</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
   <ItemGroup>
